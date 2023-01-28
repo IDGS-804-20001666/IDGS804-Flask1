@@ -22,5 +22,11 @@ def numero(numero):
 def usern(id, username):
     return "ID: {}, Nombre: {}".format(id, username)
 
+
+# Se pasa un int por la url
+@app.route("/suma/<float:n1>/<float:n2>")
+def sumar(n1, n2):
+    return "Suma: {}".format(n1 + n2)
+
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
