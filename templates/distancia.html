@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <form class="form-horizontal" name="form1" action="/resultado" method="post">
+                <div class="control-group">
+                    <label for="txtNumeroUno" class="control-label">Punto Uno</label>
+                    <div class="controls">
+                        <input type="number" name="txtX1" class="input-xlarge" value="" placeholder="X1">
+                        <input type="number" name="txtY1" class="input-xlarge" value="" placeholder="Y1">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="txtNumeroDos" class="control-label">Punto Dos</label>
+                    <div class="controls">
+                        <input type="number" name="txtX2" class="input-xlarge" value="" placeholder="X2">
+                        <input type="number" name="txtY2" class="input-xlarge" value="" placeholder="Y2">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn btn-default btn-primary">
+                            <i class="icon icon-white icon-arrow-right"></i>&nbsp;Calcular
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>  
+    </div>
+{% endblock %}

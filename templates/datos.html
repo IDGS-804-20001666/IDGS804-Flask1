@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h2>Datos</h2>
+    <h3>El nombre es {{ nombre }}</h3>
+    {% for i in listaUno %}
+        <h4>{{ i }}</h4>    
+    {% endfor %}
+{% endblock %}
