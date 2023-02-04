@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-8 mb-4">
+    <div class="card mb-4">
+        <div class="card-header py-3">
+            <h5 class="mb-0">Detalle de la orden</h5>
+        </div>
+        <div class="card-body">
+            <form name="form1" action="/resultado" method="post">
+                <div class="form-outline mb-4">
+                    <input type="text" name="txtNombre" class="form-control" required />
+                    <label class="form-label">Nombre</label>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="number" name="txtCantidadP" class="form-control" required />
+                            <label class="form-label">Cantidad de
+                                compradores</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-outline">
+                            <input type="number" name="txtCantidadB" class="form-control" required />
+                            <label class="form-label">Cantidad de boletos</label>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <p>Tarjeta cineco</p>
+                <div class="w-100 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="cineco" type="radio" value="true" />
+                        <label class="form-check-label">
+                            Si
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="cineco" type="radio" value="false" checked>
+                        <label class="form-check-label">
+                            No
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block rounded-pill" type="submit">
+                    Procesar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
