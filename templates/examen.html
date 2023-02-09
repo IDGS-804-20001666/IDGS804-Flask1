@@ -1,0 +1,203 @@
+{% extends 'practicalayout.html' %}
+{% block content %}
+<div class="col-md-8 mb-4">
+    <div class="card mb-4">
+        <div class="card-header py-3">
+            <h5 class="mb-0">Examen</h5>
+        </div>
+        <div class="card-body">
+            <form class="needs-validationE" novalidate name="formExamen" action="/resultado" method="post">
+                <hr />
+                <p class="fw-bold">Pregunta 1</p>
+                <p>¿Cuál es el planeta más grande en nuestro sistema solar?</p>
+                <div class="w-100 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta1" type="radio" checked />
+                        <label class="form-check-label">
+                            a) Mercurio
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta1" type="radio" />
+                        <label class="form-check-label">
+                            b) Marte
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta1" type="radio" value="true" />
+                        <label class="form-check-label">
+                            c) Jupiter
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta1" type="radio" />
+                        <label class="form-check-label">
+                            d) Saturno
+                        </label>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <p class="fw-bold">Pregunta 2</p>
+                <p>¿Qué tipo de animal es el koala?</p>
+                <div class="w-100 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta2" type="radio" checked />
+                        <label class="form-check-label">
+                            a) Reptil
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta2" type="radio" value="true" />
+                        <label class="form-check-label">
+                            b) Mamifero
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta2" type="radio" />
+                        <label class="form-check-label">
+                            c) Anfibio
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta2" type="radio" />
+                        <label class="form-check-label">
+                            d) Ave
+                        </label>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <p class="fw-bold">Pregunta 3</p>
+                <p>¿Quién pintó la famosa obra de arte "La Mona Lisa"?</p>
+                <div class="w-100 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta3" type="radio" value="true" checked />
+                        <label class="form-check-label">
+                            a) Leonardo da Vinci
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta3" type="radio" />
+                        <label class="form-check-label">
+                            b) Michelangelo
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta3" type="radio" />
+                        <label class="form-check-label">
+                            c) Raphael
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta3" type="radio" />
+                        <label class="form-check-label">
+                            d) Donatello
+                        </label>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <p class="fw-bold">Pregunta 4</p>
+                <p>¿En qué año terminó la Segunda Guerra Mundial?</p>
+                <div class="w-100 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta4" type="radio" value="true" checked />
+                        <label class="form-check-label">
+                            a) 1945
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta4" type="radio" />
+                        <label class="form-check-label">
+                            b) 1944
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta4" type="radio" />
+                        <label class="form-check-label">
+                            c) 1946
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta4" type="radio" />
+                        <label class="form-check-label">
+                            d) 1942
+                        </label>
+                    </div>
+                </div>
+                <p class="fw-bold">Pregunta 5</p>
+                <p>¿Cuál es la capital de Francia?</p>
+                <div class="w-100 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta5" type="radio" checked />
+                        <label class="form-check-label">
+                            a) Londres
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta5" type="radio" value="true" />
+                        <label class="form-check-label">
+                            b) París
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta5" type="radio" />
+                        <label class="form-check-label">
+                            c) Roma
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="pregunta5" type="radio" />
+                        <label class="form-check-label">
+                            d) Berlín
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <textarea class="d-none" name="datosp" id="txaDatosP"></textarea>
+                    <textarea class="d-none" name="examen" id="txaExamen"></textarea>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block rounded-pill" type="submit">
+                    Terminar
+                </button>
+                <button class="btn btn-secondary btn-lg btn-block rounded-pill ms-3" type="reset">
+                    Limpiar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    (() => {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validationE')
+        Array.prototype.slice.call(forms)
+            .forEach(form => {
+                form.addEventListener('submit', event => {
+                    let respuestasC = [];
+                    const datosp = sessionStorage.getItem('datosp');
+                    const respuesta1 = document.getElementsByName("pregunta1");
+                    const respuesta2 = document.getElementsByName("pregunta2");
+                    const respuesta3 = document.getElementsByName("pregunta3");
+                    const respuesta4 = document.getElementsByName("pregunta4");
+                    const respuesta5 = document.getElementsByName("pregunta5");
+                    if (respuesta1[2].checked)
+                        respuestasC.push("1")
+                    if (respuesta2[1].checked)
+                        respuestasC.push("1")
+                    if (respuesta3[0].checked)
+                        respuestasC.push("1")
+                    if (respuesta4[0].checked)
+                        respuestasC.push("1")
+                    if (respuesta5[1].checked)
+                        respuestasC.push("1")
+                    document.getElementById('txaDatosP').value = datosp;
+                    document.getElementById('txaExamen').value = respuestasC.length;
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'practicalayout.html' %}
+{% block content %}
+<div class="col-md-8 mb-4">
+    <div class="card mb-4">
+        <div class="card-header py-3">
+            <h5 class="mb-0">Datos personales</h5>
+        </div>
+        <div class="card-body">
+            <form class="needs-validation" novalidate>
+                <div class="form-outline mb-4">
+                    <input name="datosp" type="text" name="txtNombre" class="form-control" required />
+                    <label class="form-label">Nombre</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input name="datosp" type="text" name="txtAP" class="form-control" required />
+                    <label class="form-label">Apellido Paterno</label>
+                </div>
+                <div class="form-outline mb-4">
+                    <input name="datosp" type="text" name="txtAM" class="form-control" required />
+                    <label class="form-label">Apellido Materno</label>
+                </div>
+                <hr class="my-4" />
+                <p class="fw-bold">Fecha de Nacimiento</p>
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="form-outline">
+                            <input name="datosp" type="number" name="txtCantidadP" class="form-control" min="1" max="31" required />
+                            <label class="form-label">Día</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-outline">
+                            <input name="datosp" type="number" name="txtCantidadB" class="form-control" min="1" max="12" required />
+                            <label class="form-label">Mes</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-outline">
+                            <input name="datosp" pattern="[0-9]{4}" type="number" name="txtCantidadB" class="form-control" min="1900" max="2022" required />
+                            <label class="form-label">Año</label>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4" />
+                <p class="fw-bold">Sexo</p>
+                <div class="w-100 mb-4">
+                    <div class="form-check form-check-inline">
+                        <input name="check" id="checkM" class="form-check-input"  type="radio" checked />
+                        <label class="form-check-label">
+                            Masculino
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="check" class="form-check-input"  type="radio">
+                        <label class="form-check-label">
+                            Femenino
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block rounded-pill" type="submit">
+                    Siguiente
+                </button>
+                <button class="btn btn-secondary btn-lg btn-block rounded-pill ms-3" type="reset">
+                    Limpiar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    (() => {
+        sessionStorage.clear();
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    } else {
+                        event.preventDefault();
+                        let inputElements = document.getElementsByName("datosp");
+                        let values = [];
+                        for (let i = 0; i < inputElements.length; i++) {
+                            values.push(inputElements[i].value);
+                        }
+                        (document.getElementById('checkM').checked) ? values.push('Masculino') : values.push('Femenino')
+                        sessionStorage.setItem('datosp', JSON.stringify(values));
+                        window.location.href = "/examen";
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+{% endblock %}
